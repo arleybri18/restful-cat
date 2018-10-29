@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-4 m-4">
+        <h2>Index de Cats</h2>
+        <div class="card m-4">
+
+            <ul>
+                <% @cats.each do |cat| %>
+                <li>
+                    <a href="/cats/<%= cat.id %>">
+                        <%=cat.name%></a>
+                <li>
+                    <%end%>
+
+            </ul>
+
+        </div>
+        <a class="btn btn-primary" href="/cats/new" role="button">Create a Cat</a>
+    </div>
+</div>
